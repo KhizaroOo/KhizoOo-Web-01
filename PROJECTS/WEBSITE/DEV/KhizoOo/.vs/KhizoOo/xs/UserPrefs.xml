@@ -1,4 +1,20 @@
-﻿<Properties StartupConfiguration="{797B0664-BC01-4E3F-8A87-BF6CA059645B}|https">
-  <MonoDevelop.Ide.ItemProperties.WEB-01 FirstBuild="True" />
+﻿<Properties StartupConfiguration="{797B0664-BC01-4E3F-8A87-BF6CA059645B}|http">
+  <MonoDevelop.Ide.ItemProperties.WEB-01 PreferredExecutionTarget="/Volumes/Untitled - Data/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="KhizoOo" expanded="True">
+            <Node name="WEB-01" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
