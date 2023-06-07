@@ -21,10 +21,6 @@ jobs:
         with:
           dotnet-version: 3.1.x
           
-      # Install dotnet wasm buildtools workload
-      - name: Install .NET WASM Build Tools
-        run: dotnet workload install wasm-tools
-          
       # Publishes Blazor project to the release-folder
       - name: Publish .NET Core Project
         run: dotnet publish WEB-KhizoOo/WEB-KhizoOo.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
