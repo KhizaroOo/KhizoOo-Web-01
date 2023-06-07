@@ -1,0 +1,42 @@
+name: ASP.NET Core 3.1 Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.x
+
+    - name: Restore dependencies
+      run: dotnet restore
+      working-directory: ./path/to/your/project
+
+    - name: Build project
+      run: dotnet build --configuration Release --no-restore
+      working-directory: ./path/to/your/project
+
+    - name: Publish project
+      run: dotnet publish --configuration Release --output ./publish
+      working-directory: ././WEB-KhizoOo/WEB-KhizoOo.csproj
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ././WEB-KhizoOo/WEB-KhizoOo/publish
