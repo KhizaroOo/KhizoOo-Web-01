@@ -1,42 +1,30 @@
-name: ASP.NET Core 3.1 Deployment
+name: github pages
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Setup .NET Core SDK
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.x
-
-    - name: Restore dependencies
-      run: dotnet restore
-      working-directory: /
-
-    - name: Build project
-      run: dotnet build --configuration Release --no-restore
-      working-directory: /
-
-    - name: Publish project
-      run: dotnet publish --configuration Release --output ./publish
-      working-directory: /
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
-
     steps:
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ././WEB-KhizoOo/WEB-KhizoOo/publish
+      # Checkout the code
+      - uses: actions/checkout@v2
+
+      # Install .NET Core SDK
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.x
+          
+      # Install dotnet wasm buildtools workload
+      - name: Install .NET WASM Build Tools
+        run: dotnet workload install wasm-tools
+          
+      # Publishes Blazor project to the release-folder
+      - name: Publish .NET Core Project
+        run: dotnet publish WEB-KhizoOo/WEB-KhizoOo.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
