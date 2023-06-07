@@ -20,15 +20,15 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: ././WEB-KhizoOo/WEB-KhizoOo
+      working-directory: /
 
     - name: Build project
       run: dotnet build --configuration Release --no-restore
-      working-directory: ././WEB-KhizoOo/WEB-KhizoOo
+      working-directory: /
 
     - name: Publish project
       run: dotnet publish --configuration Release --output ./publish
-      working-directory: ././WEB-KhizoOo/WEB-KhizoOo
+      working-directory: /
 
   deploy:
     needs: build
