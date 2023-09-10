@@ -1,17 +1,29 @@
 ﻿<Properties StartupConfiguration="{F1BBF035-B80E-4873-9221-A00B8964CC02}|Default">
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.WEB-KhizoOo FirstBuild="True" PreferredExecutionTarget="/Volumes/Untitled - Data/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Home/Privacy.cshtml">
+    <Files>
+      <File FileName="Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Home/Privacy.cshtml" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="KhizoOo" expanded="True" selected="True" />
+          <Node name="KhizoOo" expanded="True">
+            <Node name="WEB-KhizoOo" expanded="True">
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="Privacy.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.WEB-KhizoOo FirstBuild="True" PreferredExecutionTarget="/Volumes/Untitled - Data/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
